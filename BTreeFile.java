@@ -1,9 +1,4 @@
-/*
- * @(#) bt.java   98/03/24
- * Copyright (c) 1998 UW.  All Rights Reserved.
- *         Author: Xiaohu Li (xioahu@cs.wisc.edu).
- *
- */
+
 
 package btree;
 
@@ -27,28 +22,14 @@ public class BTreeFile extends IndexFile implements GlobalConst {
 	private static FileOutputStream fos;
 	private static DataOutputStream trace;
 
-	/**
-	 * It causes a structured trace to be written to a file. This output is used
-	 * to drive a visualization tool that shows the inner workings of the b-tree
-	 * during its operations.
-	 *
-	 * @param filename
-	 *            input parameter. The trace file name
-	 * @exception IOException
-	 *                error from the lower layer
-	 */
+	
 	public static void traceFilename(String filename) throws IOException {
 
 		fos = new FileOutputStream(filename);
 		trace = new DataOutputStream(fos);
 	}
 
-	/**
-	 * Stop tracing. And close trace file.
-	 *
-	 * @exception IOException
-	 *                error from the lower layer
-	 */
+	
 	public static void destroyTrace() throws IOException {
 		if (trace != null)
 			trace.close();
