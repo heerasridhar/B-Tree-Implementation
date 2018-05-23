@@ -1,8 +1,11 @@
 # B-Tree-Implementation
 
 Methods that need to be implemented in BTreeFile.java are:
+
 1.insert
+
 2._insert 
+
 3.NaiveDelete  
 
 - Insert() method
