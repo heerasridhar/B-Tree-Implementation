@@ -6,6 +6,7 @@ Methods that need to be implemented in BTreeFile.java are:
 3.NaiveDelete  
 
 - Insert() method
+
 The Insert part was implemented by considering two cases. First the header page is checked to be INVALID_PAGE, if true then the tree is empty and a new page is created. The first new page created is called the LEAF page. If the header page is NOT an INVALID_PAGE calling the _INSERT function inserted the key and Record Id.  The ROOTPAGE and HEADERPAGE is pinned and unpinned accordingly. After creating a RootEntry it is evaluated to NULL to check if a leaf split propagated to the root and performed a root split. The entryPage contains the data of the new entry which was given up from the level down in the recurrence process. The old root split becomes the left child of the new root.
 
 - _Insert() method
